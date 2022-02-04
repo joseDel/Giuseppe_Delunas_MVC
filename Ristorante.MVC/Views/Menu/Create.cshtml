@@ -1,0 +1,21 @@
+﻿@model MenuViewModel
+<h1>Crea un nuovo Menu</h1>
+
+<form method="post">
+
+    @*<div class="form-group">
+    <label asp-for="IdMenu"></label>
+    <input asp-for="IdMenu" class="form-control" readonly/>
+    <span asp-validation-for ="IdMenu" class="text-danger"></span>
+    </div>*@
+
+    <div class="form-group">
+    <label asp-for="Nome"></label>
+    <input asp-for="Nome" class="form-control" />
+    <span asp-validation-for ="Nome" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="Inserisci" class="btn btn-primary" />
+    <input type="reset" value="Reset" class="btn btn-primary" />
+    <a class="btn btn-primary" asp-controller="Menu" asp-action="Index">Indietro</a>
+</form>

@@ -1,0 +1,18 @@
+﻿@model PiattoViewModel
+
+<form method="post">
+
+    <p>Sei sicuro di voler eliminare il piatto @Model.IdPiatto - @Model.Nome?</p>
+
+
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" readonly />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="Conferma eliminazione" class="tbn btn-danger" />
+    <a class="btn btn-primary" asp-controller="Piatti" asp-action="Index" role="button">Annulla</a>
+
+
+</form>
